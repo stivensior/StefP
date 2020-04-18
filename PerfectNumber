@@ -1,0 +1,19 @@
+public class PerfectNumber {
+    public static boolean isPerfectNumber (int number){
+        if (number < 1){
+            return false;
+        }
+        int factor = 0;
+        int sum = 0;
+        for(int i = 1; i < number; i++) {
+            factor = number % i;
+            if (factor == 0) {
+                sum += i;
+            }
+        }
+        if(sum == number){
+            return true;
+        }
+        return false;
+    }
+}
